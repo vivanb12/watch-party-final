@@ -1,0 +1,175 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Watch Party design system — dusk & night flat-illustration palette.
+ * All colors are oklch semantic tokens. Components use only these tokens.
+ */
+
+@theme inline {
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-seat: var(--seat);
+  --color-seat-shadow: var(--seat-shadow);
+  --color-screen: var(--screen);
+  --color-screen-glow: var(--screen-glow);
+  --color-curtain: var(--curtain);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-romantic: var(--romantic);
+  --color-sports: var(--sports);
+  --color-friends: var(--friends);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.19 0.045 262);
+  --foreground: oklch(0.95 0.025 80);
+  --card: oklch(0.24 0.05 262);
+  --card-foreground: oklch(0.95 0.025 80);
+  --popover: oklch(0.23 0.05 262);
+  --popover-foreground: oklch(0.95 0.025 80);
+  --primary: oklch(0.8 0.14 70);
+  --primary-foreground: oklch(0.2 0.05 262);
+  --secondary: oklch(0.3 0.055 262);
+  --secondary-foreground: oklch(0.95 0.025 80);
+  --muted: oklch(0.28 0.045 262);
+  --muted-foreground: oklch(0.74 0.04 260);
+  --accent: oklch(0.68 0.16 30);
+  --accent-foreground: oklch(0.98 0.01 80);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(0.36 0.05 262);
+  --input: oklch(0.34 0.05 262);
+  --ring: oklch(0.8 0.14 70);
+  --seat: oklch(0.52 0.19 25);
+  --seat-shadow: oklch(0.36 0.14 22);
+  --screen: oklch(0.96 0.03 85);
+  --screen-glow: oklch(0.9 0.09 80 / 0.45);
+  --curtain: oklch(0.42 0.16 22);
+  --success: oklch(0.75 0.15 155);
+  --warning: oklch(0.82 0.15 85);
+  --romantic: oklch(0.7 0.17 10);
+  --sports: oklch(0.7 0.14 235);
+  --friends: oklch(0.78 0.15 75);
+  --chart-1: oklch(0.8 0.14 70);
+  --chart-2: oklch(0.7 0.14 235);
+  --chart-3: oklch(0.7 0.17 10);
+  --chart-4: oklch(0.75 0.15 155);
+  --chart-5: oklch(0.68 0.16 30);
+  --sidebar: oklch(0.22 0.05 262);
+  --sidebar-foreground: oklch(0.95 0.025 80);
+  --sidebar-primary: oklch(0.8 0.14 70);
+  --sidebar-primary-foreground: oklch(0.2 0.05 262);
+  --sidebar-accent: oklch(0.3 0.055 262);
+  --sidebar-accent-foreground: oklch(0.95 0.025 80);
+  --sidebar-border: oklch(0.36 0.05 262);
+  --sidebar-ring: oklch(0.8 0.14 70);
+
+  --gradient-night: linear-gradient(180deg, oklch(0.16 0.05 265) 0%, oklch(0.24 0.07 280) 55%, oklch(0.42 0.12 25) 100%);
+  --gradient-dusk: linear-gradient(180deg, oklch(0.3 0.08 270), oklch(0.6 0.15 30));
+  --shadow-glow: 0 0 80px 10px var(--screen-glow);
+  --shadow-soft: 0 20px 50px -20px oklch(0.05 0.03 262 / 0.7);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility bg-night {
+  background-image: var(--gradient-night);
+}
+@utility bg-dusk {
+  background-image: var(--gradient-dusk);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility poster {
+  background-image: linear-gradient(160deg, oklch(0.6 0.14 var(--poster-hue, 40)), oklch(0.26 0.08 calc(var(--poster-hue, 40) + 50)));
+}
+@utility stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 10% 20%, var(--screen) 50%, transparent 51%),
+    radial-gradient(1px 1px at 30% 8%, var(--screen) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 55% 15%, var(--screen) 50%, transparent 51%),
+    radial-gradient(1px 1px at 72% 5%, var(--screen) 50%, transparent 51%),
+    radial-gradient(2px 2px at 88% 22%, var(--screen) 50%, transparent 51%),
+    radial-gradient(1px 1px at 18% 35%, var(--screen) 50%, transparent 51%),
+    radial-gradient(1px 1px at 64% 30%, var(--screen) 50%, transparent 51%);
+}
+
+/*
+ * Hide any platform-injected badge/branding element (instant, pre-JS).
+ * Scoped under `body` so it can never match <html> or <body> themselves.
+ */
+body [id*="lovable" i],
+body [class*="lovable" i],
+body [data-lovable],
+body a[href*="lovable.dev" i],
+body iframe[src*="lovable" i],
+body [id*="gpt-engineer" i],
+body [class*="gptengineer" i] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
