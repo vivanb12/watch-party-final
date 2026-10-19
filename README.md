@@ -74,7 +74,7 @@ Ready-made rows: *Free to play now, Date night, Game day, Family movie night, Mi
 
 ---
 
-## How it works (plain English)
+## How it works
 
 Think of the room as a **shared remote control** that lives in the cloud.
 
