@@ -9,24 +9,7 @@ the host share their screen.
 
 ---
 
-## Table of contents
-
-1. [How to use it (2 minutes)](#how-to-use-it-2-minutes)
-2. [Features](#features)
-3. [How it works (plain English)](#how-it-works-plain-english)
-4. [Performance and latency](#performance-and-latency)
-5. [Failure handling](#failure-handling)
-6. [Tech stack](#tech-stack)
-7. [Run it on your own computer](#run-it-on-your-own-computer)
-8. [Environment variables](#environment-variables)
-9. [Set up the database](#set-up-the-database)
-10. [Deploy to Vercel](#deploy-to-vercel)
-11. [Project structure](#project-structure)
-12. [Known limitations](#known-limitations)
-
----
-
-## How to use it (2 minutes)
+## How to use it
 
 ### Start a party (host)
 
